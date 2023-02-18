@@ -7,6 +7,7 @@ class Film(models.Model):
     premiera = models.DateField(null=True, blank=True)
     imdb_rating = models.DecimalField(decimal_places=2 , max_digits=4, null=True, blank=True)
     plakat = models.ImageField(upload_to="plakaty", null=True, blank=True)
+    film_genre = models.CharField(max_length=64, blank=False)
 
     def __str__(self):
         return self.tytul + ' (' +str(self.rok)+ ')'
