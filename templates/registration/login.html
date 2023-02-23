@@ -8,11 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" encytype="multipart/form-data">
+    <form method="post">
         {% csrf_token %}
         {{ form }}
-        <button type="submit">Dodaj film</button>
+        <button type="submit">Zaloguj</button>
     </form>
-    <a href="{% url 'wszystkie_filmy' %}">Cofnij</a>
 </body>
 </html>

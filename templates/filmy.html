@@ -10,14 +10,18 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="{% url 'nowy_film' %}">Nowy film</a>
+
     {% if filmy|length == 0 %}
         <h1>Brak filmów</h1>
     {% else %}
         <h1>Ilość filmów w BD: {{ filmy|length }}</h1>
 
         {% for film in filmy %}
-            <h1>{{ film.tytul }} ({{ film.rok }})</h1>
+            <h3>{{ film.tytul }} ({{ film.rok }})</h3>
             <p>{{ film.opis }}</p>
+            <a href="{% url 'edytuj_film' film.id %}">Edytuj</a>
+            <a href="{% url 'usun_film' film.id %}">Usuń</a>
         {% endfor %}
     {% endif %}
 </body>
