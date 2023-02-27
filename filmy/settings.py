@@ -23,7 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-cflte-vl*iy==4(a$d0+&nom6p_axc%_%ehwb80quvoj!=rs!$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
 DEBUG = False
+=======
+DEBUG = True
+>>>>>>> 422b0396 (003. Nowe szablony, edycja filmu)
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
@@ -55,7 +59,11 @@ ROOT_URLCONF = 'filmy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [],
+=======
+        'DIRS': ["templates"],
+>>>>>>> 422b0396 (003. Nowe szablony, edycja filmu)
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,8 +125,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+<<<<<<< HEAD
+=======
+STATICFILES_DIRS = ['moje_static']
+>>>>>>> 422b0396 (003. Nowe szablony, edycja filmu)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+<<<<<<< HEAD
+=======
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'moje_media'
+>>>>>>> 422b0396 (003. Nowe szablony, edycja filmu)
