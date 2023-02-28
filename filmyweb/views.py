@@ -1,30 +1,18 @@
-<<<<<<< HEAD
 from django.shortcuts import render ,get_object_or_404 , redirect
 from .models import Film
 from .forms import FilmForm
 from django.contrib.auth.decorators import login_required
-=======
-<<<<<<< HEAD
 from django.shortcuts import render
 from django.http import HttpResponse
 
 def test_response(request):
     return HttpResponse("<h1>To jest nasz pierwszy test</h1>")
-=======
-from django.shortcuts import render ,get_object_or_404 , redirect
-from django.http import HttpResponse
-from .models import Film
-from .forms import FilmForm
->>>>>>> origin/main
 
 def wszystkie_filmy(request):
     wszystkie = Film.objects.all()
     return render(request,'filmy.html', {'filmy': wszystkie})
 
-<<<<<<< HEAD
 @login_required()
-=======
->>>>>>> origin/main
 def nowy_film(request):
     form = FilmForm(request.POST or None, request.FILES or None)
 
@@ -34,10 +22,7 @@ def nowy_film(request):
 
     return render(request, 'film_form.html', {'form': form})
 
-<<<<<<< HEAD
 @login_required()
-=======
->>>>>>> origin/main
 def edytuj_film(request, id):
     film = get_object_or_404(Film, pk=id)
     form = FilmForm(request.POST or None, request.FILES or None, instance=film)
@@ -47,7 +32,6 @@ def edytuj_film(request, id):
         return redirect(wszystkie_filmy)
 
     return render(request, 'film_form.html', {'form': form})
-<<<<<<< HEAD
 
 @login_required()
 def usun_film(request, id):
@@ -58,6 +42,3 @@ def usun_film(request, id):
         return redirect(wszystkie_filmy)
 
     return render(request, 'potwierdz.html', {'film': film})
-=======
->>>>>>> 422b0396 (003. Nowe szablony, edycja filmu)
->>>>>>> origin/main
