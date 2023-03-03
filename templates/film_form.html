@@ -3,11 +3,27 @@
 {% load bootstrap %}
 {% block strona %}
 
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form|bootstrap }}
-        <button type="submit">Dodaj film</button>
-    </form>
-        <a href="{% url 'wszystkie_filmy' %}">Cofnij</a>
+    <div class="card" style="width: 26rem;">
+      <div class="card-body">
+          {% if nowy %}
+            <h5 class="card-title">Nowy film</h5>
+          {% else %}
+            <h5 class="card-title">Edytuj film</h5>
+          {% endif %}
+
+        <h5 class="card-title">Zaloguj się</h5>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                    {% if nowy %}
+                        <button type="submit" class="btn btn-primary">Nowy film</button>
+                    {% else %}
+                        <button type="submit" class="btn btn-primary">Edytuj film</button>
+                    {% endif %}
+            </form>
+      </div>
+    </div>
+<a href="{% url 'wszystkie_filmy' %}">Cofnij</a>
+
 
 {% endblock %}

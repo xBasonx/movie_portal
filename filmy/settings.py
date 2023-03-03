@@ -124,8 +124,6 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = ['moje_static']
 
-STATICFILES_DIRS = ['moje_static']
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -138,7 +136,3 @@ MEDIA_ROOT = 'moje_media'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'wszystkie_filmy'
 LOGOUT_REDIRECT_URL = 'wszystkie_filmy'
-
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = 'moje_media'

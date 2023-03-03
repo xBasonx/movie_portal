@@ -3,12 +3,16 @@
 {% block tytul %}Potwierdź{% endblock %}
 
 {% block strona %}
+    <div class="card" style="width: 26rem;">
+        <div class="card-body">
+            <h5 class="card-title">Czy napewno chcesz usunąć {{film}} ?</h5>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Usuń film</button>
+            </form>
+        </div>
+    </div>
 
-    <h1>Czy napewno chcesz {{film}} ten film?</h1>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Usuń film</button>
-        <a href="{% url 'wszystkie_filmy' %}">Cofnij</a>
-    </form>
+    <a href="{% url 'wszystkie_filmy' %}">Cofnij</a>
 
 {% endblock %}
