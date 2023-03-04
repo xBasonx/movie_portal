@@ -1,3 +1,7 @@
 h1 {
     color : green;
 }
+.film-plakat {
+    width: 150px;
+    float: left;
+}
