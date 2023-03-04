@@ -5,3 +5,9 @@ h1 {
     width: 150px;
     float: left;
 }
+.opis {
+    margin-left: 15px;
+}
+.card {
+    width: 36rem;
+}

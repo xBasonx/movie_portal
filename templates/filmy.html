@@ -23,7 +23,7 @@
         <h1>Ilość filmów : {{ filmy|length }}</h1>
 
         {% for film in filmy %}
-            <div class="card" style="width: 26rem;">
+            <div class="card">
               <div class="card-body">
                   <img src="/media/{{film.plakat}}" class="film-plakat">
                       <div class="row">
@@ -36,7 +36,7 @@
                           </div>
                       </div>
                   <div class="row">
-                      <p class="card-text">{{ film.opis }}</p>
+                      <p class="card-text opis">{{ film.opis }}</p>
                   </div>
               </div>
             </div>

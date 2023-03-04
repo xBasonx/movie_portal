@@ -5,7 +5,7 @@
 {% block strona %}
     <div class="card" style="width: 26rem;">
         <div class="card-body">
-            <h5 class="card-title">Czy napewno chcesz usunąć {{film}} ?</h5>
+            <h5 class="card-title">Czy napewno chcesz usunąć {{film.tytul}} ?</h5>
             <form method="post">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Usuń film</button>
