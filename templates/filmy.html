@@ -4,7 +4,10 @@
 
 
 {% block strona %}
-    <div class="jumbotron">
+<div id="container">
+    <div id="logo">Filmowo</div>
+    <div id="menu">Filmy Ranking Kontakt</div>
+    <div id="logpanel">
         {% if user.is_authenticated %}
             <h1 class="display-4">Witaj {{ user.username }}</h1>
             <a href="{% url 'logout' %}" class="btn btn-light">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
@@ -13,14 +16,11 @@
         {% endif %}
     </div>
 
-
-    <hr>
-
-    <a href="{% url 'nowy_film' %}">Nowy film <i class="fa-solid fa-square-plus"></i></a>
+    <div id="content">
+    <!--<a href="{% url 'nowy_film' %}">Nowy film <i class="fa-solid fa-square-plus"></i></a>
     {% if filmy|length == 0 %}
         <h1>Brak filmów</h1>
-    {% else %}
-        <h1>Ilość filmów : {{ filmy|length }}</h1>
+    {% else %}-->
 
         {% for film in filmy %}
             <div class="card">
@@ -42,4 +42,7 @@
             </div>
         {% endfor %}
     {% endif %}
-{% endblock strona %}
+    </div>
+    <div id="footer">To jest stopka</div>
+</div>
+<!--{% endblock strona %}-->

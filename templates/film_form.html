@@ -1,5 +1,5 @@
 {% extends 'glowny.html' %}
-{% block tytul %}Film form{% endblock %}
+<!--{% block tytul %}Film form{% endblock %}-->
 {% load bootstrap %}
 {% block strona %}
 
@@ -14,7 +14,7 @@
         <h5 class="card-title">Zaloguj się</h5>
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form|bootstrap }}
+                {{ form<!--|bootstrap--> }}
                     {% if nowy %}
                         <button type="submit" class="btn btn-primary">Nowy film</button>
                     {% else %}
