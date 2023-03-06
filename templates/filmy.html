@@ -6,7 +6,29 @@
 {% block strona %}
 <div id="container">
     <div id="logo">Filmowo</div>
-    <div id="menu">Filmy Ranking Kontakt</div>
+    <div id="menu">
+        <div class="option">Filmy</div>
+        <div class="option">Ranking</div>
+        <div class="option">Kontakt</div>
+        <div style="clear:both"></div>
+    </div>
+
+    <div id="topbar">
+        <div id="topbarL">
+            <img class="topimg" src="{% static 'camera.png' %}" alt="Camera">
+        </div>
+
+        <div id="topbarM">
+            Witaj w moim projekcie strony internetowej dla miłośników filmów ;) Po dołączeniu do naszego małego grona , masz możliwość prowadzenia własnej historii, filmologii i zdobywania osiągnięć w tym co kochasz !
+        </div>
+
+        <div id="topbarR">
+            <img class="topimg" src="{% static 'camera.png' %}" alt="Camera">
+        </div>
+    </div>
+
+    <div style="clear:both"></div>
+
     <div id="logpanel">
         {% if user.is_authenticated %}
             <h1 class="display-4">Witaj {{ user.username }}</h1>

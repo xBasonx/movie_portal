@@ -1,6 +1,6 @@
 body {
     padding: 2rem;
-    background-color: gray;
+    background-color: #404040;
     font-family: 'Lato', sans-serif;
     color: white;
 }
@@ -20,9 +20,9 @@ body {
 }
 
 #menu {
-    background-color:#CCCCCC;
     margin-top: 20px;
-    color: #000000;
+    background-color: #303030;
+    padding: 10px;
 }
 
 #logpanel {
@@ -35,6 +35,60 @@ body {
 
 #footer {
 
+}
+
+.option {
+    float: left;
+    background-color: #303030
+    min-width: 50px;
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    border-right: 2px dotted #444444;
+    opacity: 0.8;
+
+}
+
+.option:hover {
+    background-color: #000000;
+    cursor: pointer;
+}
+
+#topbar {
+    background-color: #CCCCCC;
+    color: black;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: 170px;
+}
+
+#topbarL {
+    float: left;
+    padding: 20px;
+    width: 138px;
+    text-align: center;
+    border-right: 2px dotted #CCCCCC;
+}
+
+#topbarM {
+    float: left;
+    padding: 20px;
+    width: 580px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#topbarR {
+    float: left;
+    padding: 20px;
+    width: 138px;
+    text-align: center;
+    border-right: 2px dotted #CCCCCC;
+}
+
+.topimg {
+    height: 140px;
 }
 
 .film-plakat {
@@ -51,21 +105,20 @@ body {
     width: 36rem;
 }
 
-h5 {
-    color: gray;
-}
 
 h1 {
     font-size: 48px;
 }
 
 a:link{
-    color: antiquewhite;
+    color: white;
 }
 
 a:visited{
-    color: antiquewhite;
+    color: white;
 }
 
 a:hover{
-    color: purple;
+    color: #AAAAAA;
+}
+
