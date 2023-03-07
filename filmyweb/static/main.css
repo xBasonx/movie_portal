@@ -12,21 +12,26 @@ body {
 }
 
 #logo {
+    float: left;
     color: white;
     margin-top: 20px;
-    font-size: 44px;
+    font-size: 50px;
     letter-spacing: 3px;
     font-weight: 900;
+    width: 850px;
 }
 
 #menu {
+    width: 960px;
     margin-top: 20px;
     background-color: #303030;
     padding: 10px;
 }
 
 #logpanel {
-
+    margin-top: 30px;
+    width: 150px;
+    float: left;
 }
 
 #content {
@@ -85,6 +90,10 @@ body {
     width: 138px;
     text-align: center;
     border-right: 2px dotted #CCCCCC;
+}
+
+.loginwelcome {
+    text-transform: capitalize;
 }
 
 .topimg {

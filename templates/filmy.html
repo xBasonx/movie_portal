@@ -6,6 +6,18 @@
 {% block strona %}
 <div id="container">
     <div id="logo">Filmowo</div>
+
+    <div id="logpanel">
+        {% if user.is_authenticated %}
+            <h4 class="loginwelcome">Witaj : {{ user.username }}</h4>
+            <a href="{% url 'logout' %}" class="btn btn-light">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+        {% else %}
+            <a href="{% url 'login' %}" class="btn btn-success">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+        {% endif %}
+    </div>
+
+    <div style="clear:both"></div>
+
     <div id="menu">
         <div class="option">Filmy</div>
         <div class="option">Ranking</div>
@@ -28,15 +40,6 @@
     </div>
 
     <div style="clear:both"></div>
-
-    <div id="logpanel">
-        {% if user.is_authenticated %}
-            <h1 class="display-4">Witaj {{ user.username }}</h1>
-            <a href="{% url 'logout' %}" class="btn btn-light">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
-        {% else %}
-            <a href="{% url 'login' %}" class="btn btn-success">Login <i class="fa-solid fa-right-to-bracket"></i></a>
-        {% endif %}
-    </div>
 
     <div id="content">
     <!--<a href="{% url 'nowy_film' %}">Nowy film <i class="fa-solid fa-square-plus"></i></a>
