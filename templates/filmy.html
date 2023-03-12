@@ -5,29 +5,41 @@
 
 {% block strona %}
 <div id="container">
-    <div id="logo">Filmowo</div>
+    <div id="logo">Filmomania</div>
+
+    <!-- Logowanie użytkownika -->
 
     <div id="logpanel">
         {% if user.is_authenticated %}
             <h4 class="loginwelcome">Witaj : {{ user.username }}</h4>
-            <a href="{% url 'logout' %}" class="btn btn-light">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="{% url 'logout' %}" class="log">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
         {% else %}
-            <a href="{% url 'login' %}" class="btn btn-success">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="{% url 'login' %}" class="log">Login <i class="fa-solid fa-right-to-bracket"></i></a>
         {% endif %}
     </div>
 
     <div style="clear:both"></div>
 
+    <!-- Menu główne -->
+
     <div id="menu">
+        <div class="option">Główna</div>
         <div class="option">Filmy</div>
+        <div class="option">Seriale</div>
         <div class="option">Ranking</div>
+        <div class="option">Moje filmy</div>
+        <div class="option">Moje osiągnięcia</div>
+        <div class="option">Recenzje</div>
         <div class="option">Kontakt</div>
         <div style="clear:both"></div>
     </div>
 
+    <!-- Nad tekst strony -->
+
     <div id="topbar">
         <div id="topbarL">
-            <img class="topimg" src="{% static 'camera.png' %}" alt="Camera">
+            Witaj w moim projekcie strony internetowej dla miłośników filmów ;)
+            <!--<img class="topimg" src="{% static 'camera.png' %}" alt="Camera">-->
         </div>
 
         <div id="topbarM">
@@ -35,39 +47,58 @@
         </div>
 
         <div id="topbarR">
-            <img class="topimg" src="{% static 'camera.png' %}" alt="Camera">
+            Witaj w moim projekcie strony internetowej dla miłośników filmów ;)
+            <!--<img class="topimg" src="{% static 'camera.png' %}" alt="Camera">-->
         </div>
+        <div style="clear:both"></div>
     </div>
 
-    <div style="clear:both"></div>
+    <!-- Lewa strona główna -->
+
+    <div id="sidebar">
+        <div class="optionL">Filmy</div>
+        <div class="optionL">Seriale</div>
+        <div class="optionL">Ranking</div>
+        <div class="optionL">Moje filmy</div>
+        <div class="optionL">Moje osiągnięcia</div>
+    </div>
+
+    <!-- Prawa strona główna -->
 
     <div id="content">
-    <!--<a href="{% url 'nowy_film' %}">Nowy film <i class="fa-solid fa-square-plus"></i></a>
-    {% if filmy|length == 0 %}
-        <h1>Brak filmów</h1>
-    {% else %}-->
+        <!--
+        Funkcja dodawania filmów.
 
-        {% for film in filmy %}
-            <div class="card">
-              <div class="card-body">
-                  <img src="/media/{{film.plakat}}" class="film-plakat">
-                      <div class="row">
-                          <div class="col-9">
-                              <h5 class="card-title">{{ film }}</h5>
+        <a href="{% url 'nowy_film' %}">Nowy film <i class="fa-solid fa-square-plus"></i></a> -->
+        {% if filmy|length == 0 %}
+            <h1>Brak filmów</h1>
+        {% else %}
+        <h1>Polecane :</h1>
+
+            {% for film in filmy %}
+                <div class="card">
+                  <div class="card-body">
+                      <img src="/media/{{film.plakat}}" class="film-plakat">
+                          <div class="row">
+                              <div class="col-9">
+                                  <h5 class="card-title">{{ film }}</h5>
+                              </div>
+                              <div class="col-3">
+                                  <a href="{% url 'edytuj_film' film.id %}" class="icn1"><i class="fa-solid fa-2x fa-pen-to-square"></i></a>
+                                  <a href="{% url 'usun_film' film.id %}" class="icn2"><i class="fa-solid fa-2x fa-trash"></i></a>
+                              </div>
                           </div>
-                          <div class="col-3">
-                              <a href="{% url 'edytuj_film' film.id %}"><i class="fa-solid fa-2x fa-pen-to-square"></i></a>
-                              <a href="{% url 'usun_film' film.id %}"><i class="fa-solid fa-2x fa-trash"></i></a>
+                          <div class="row">
+                              <p class="desc">{{ film.opis }}</p>
                           </div>
-                      </div>
-                  <div class="row">
-                      <p class="card-text opis">{{ film.opis }}</p>
                   </div>
-              </div>
-            </div>
-        {% endfor %}
-    {% endif %}
+                </div>
+            {% endfor %}
+        <!--{% endif %}-->
     </div>
+
+    <!-- Stopka -->
+
     <div id="footer">To jest stopka</div>
 </div>
-<!--{% endblock strona %}-->
+{% endblock strona %}

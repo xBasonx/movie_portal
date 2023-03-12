@@ -2,14 +2,35 @@ body {
     padding: 2rem;
     background-color: #404040;
     font-family: 'Lato', sans-serif;
-    color: white;
 }
+
+a:link{
+    color: #555555;
+}
+
+a:visited{
+    color: #555555;
+}
+
+a:hover{
+    color: #333333;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+
+
+/* Szablon*/
 
 #container {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* logo */
 
 #logo {
     float: left;
@@ -21,12 +42,7 @@ body {
     width: 850px;
 }
 
-#menu {
-    width: 960px;
-    margin-top: 20px;
-    background-color: #303030;
-    padding: 10px;
-}
+/* panel logowanie */
 
 #logpanel {
     margin-top: 30px;
@@ -34,39 +50,72 @@ body {
     float: left;
 }
 
-#content {
-
+.log:link {
+    color: white;
 }
 
-#footer {
+.log:visited {
+    color: white;
+}
 
+.log:hover {
+    color: #EEEEEE;
+}
+
+.log {
+    background-color: #AAAAAA;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    ursor: pointer;
+}
+
+/* menu */
+
+#menu {
+    width: 980px;
+    margin-top: 20px;
+    background-color: #303030;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .option {
     float: left;
-    background-color: #303030
+    margin-left: 15px;
+    background-color: #303030;
     min-width: 50px;
     height: 25px;
     font-size: 18px;
     padding: 10px;
-    border-right: 2px dotted #444444;
-    opacity: 0.8;
-
+    opacity: 0.75;
 }
 
 .option:hover {
-    background-color: #000000;
+    background-color: #AAAAAA;
     cursor: pointer;
 }
 
-#topbar {
-    background-color: #CCCCCC;
-    color: black;
+/* main side */
+
+#topbar{
+    background-color: #303030;
+    color: white;
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 25px;
     height: 170px;
 }
+
+/* centre-up side */
 
 #topbarL {
     float: left;
@@ -80,6 +129,7 @@ body {
     float: left;
     padding: 20px;
     width: 580px;
+    border-right: 2px dotted #CCCCCC;
     font-size: 16px;
     text-align: justify;
 }
@@ -89,20 +139,87 @@ body {
     padding: 20px;
     width: 138px;
     text-align: center;
-    border-right: 2px dotted #CCCCCC;
-}
-
-.loginwelcome {
-    text-transform: capitalize;
 }
 
 .topimg {
-    height: 140px;
+    width: 150 px;
+}
+
+/* Left side */
+
+#sidebar {
+    float: left;
+    width: 148px;
+    min-height:620px;
+    height: 100%;
+    padding: 20px;
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 18px;
+    border-right: 2px dotted #666666;
+}
+
+.optionL {
+    font-size: 18px;
+    height: 25px;
+    padding: 10px;
+    border-bottom: 2px dotted #444444;
+}
+
+.optionL:hover {
+    background-color: #AAAAAA;
+    color: white;
+    cursor: pointer;
+}
+
+/* Right side */
+
+#content {
+    color: black;
+    float: right;
+    padding: 40px;
+    width: 730px;
+    background-color: #DEDEDE;
+    min-height: 580px;
+    text-align: justify;
+
 }
 
 .film-plakat {
     width: 100px;
+    height: 140px;
     float: left;
+}
+
+.card-title {
+    margin-left: 110px;
+}
+
+.icn1 {
+    margin-left: 10px;
+}
+
+.icn2 {
+    margin-left: 5px;
+}
+
+.desc {
+    margin-left: 110px;
+}
+
+/* Footer */
+
+#footer {
+    clear:both;
+}
+
+/*-------*/
+
+
+
+.loginwelcome {
+    text-transform: capitalize;
 }
 
 .opis {
@@ -115,19 +232,5 @@ body {
 }
 
 
-h1 {
-    font-size: 48px;
-}
 
-a:link{
-    color: white;
-}
-
-a:visited{
-    color: white;
-}
-
-a:hover{
-    color: #AAAAAA;
-}
 
