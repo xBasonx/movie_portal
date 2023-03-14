@@ -1,6 +1,6 @@
 body {
     padding: 2rem;
-    background-color: #404040;
+    background-color: #101820;
     font-family: 'Lato', sans-serif;
 }
 
@@ -34,7 +34,7 @@ h1 {
 
 #logo {
     float: left;
-    color: white;
+    color: #F2AA4C;
     margin-top: 20px;
     font-size: 50px;
     letter-spacing: 3px;
@@ -51,18 +51,18 @@ h1 {
 }
 
 .log:link {
-    color: white;
+    color: #F2AA4C;
 }
 
 .log:visited {
-    color: #666666;
+    color: #F2AA4C;
 }
 
 .log {
     border-radius: 30px;
-    background-color: #EEEEEE;
+    background-color: #101820;
     border: 2px solid #888888;;
-    color: #888888;
+    color: #F2AA4C;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -74,8 +74,8 @@ h1 {
     box-shadow: 0px 12px 16px 0 rgba(0,0,0,0.15)
 }
 .log:hover {
-    background-color: #666666;
-    color: #EEEEEE;
+    background-color: #212931;
+    color: #F2AA4C;
     border-color: white;
     box-shadow: 20px 20px 16px 0 rgba(0,0,0,0.35);
 }
@@ -87,8 +87,9 @@ h1 {
     margin-top: 20px;
     background-color: #303030;
     border-radius: 15px;
+    transition-duration: 0.5s;
     padding: 10px;
-    color: white;
+    color: #F2AA4C;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -102,11 +103,11 @@ h1 {
     height: 25px;
     font-size: 18px;
     padding: 10px;
-    opacity: 0.75;
+    border-radius: 15px;
 }
 
 .option:hover {
-    background-color: #AAAAAA;
+    box-shadow: 0px 0px 15px #F2AA4C;
     cursor: pointer;
 }
 
@@ -115,11 +116,10 @@ h1 {
 #topbar{
     background-color: #303030;
     height: 130px;
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     color: white;
     padding: 10px;
     margin-top: 20px;
-    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,7 +139,7 @@ h1 {
     border-right: 2px dotted #CCCCCC;
     border-left: 2px dotted #CCCCCC;
     font-size: 16px;
-    text-align: justify;
+    text-align: center;
 }
 
 #topbarR {
@@ -161,12 +161,11 @@ h1 {
     min-height:620px;
     height: 100%;
     padding: 20px;
-    color: black;
-    background-color: lightgray;
+    color: white;
+    background-color: #303030;
     text-align: center;
     font-size: 18px;
     border-right: 2px dotted #666666;
-    border-radius: 15px 0px 0px 15px;
 }
 
 .optionL {
@@ -194,7 +193,6 @@ h1 {
     background-color: #DEDEDE;
     min-height: 580px;
     text-align: justify;
-    border-radius: 0px 15px 15px 0px;
 
 }
 
@@ -226,7 +224,12 @@ h1 {
 /* Footer */
 
 #footer {
-    clear:both;
+    float: left;
+    width: 960px;
+    padding: 20px;
+    background-color: #303030;
+    color: white;
+    border-radius: 0px 0px 15px 15px;
 }
 
 /*-------*/
@@ -246,6 +249,27 @@ h1 {
     width: 36rem;
 }
 
+/* Strona logowania */
 
+.logpanel1 {
+    background-color: #303030;
+    color: #F2AA4C;
+    padding: 30px;
+    width: 450px;
+    height: 200px;
+    border-radius: 15px;
+    text-align: center;
+
+}
+
+.card-title {
+    color: white;
+    display: block;
+    justify-content: center;
+}
+
+.logdiv {
+    float: left;
+}
 
 

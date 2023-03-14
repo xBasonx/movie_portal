@@ -3,12 +3,12 @@
 {% block tytul %}Zaloguj{% endblock %}
 
 {% block strona %}
-<div class="log-panel">
-    <h2 class="card-title">Zaloguj się</h2>
-    <form method="post">
+<div class="logpanel1">
+    <h2 class="card-title">Zaloguj się</h2></n>
+    <form method="post" >
         {% csrf_token %}
-        {{ form|bootstrap }}
-        <button type="submit" class="btn btn-info">Zaloguj <i class="fa-solid fa-right-to-bracket"></i></button>
+        {{ form }}
+        <button type="submit" class="log">Zaloguj <i class="fa-solid fa-right-to-bracket"></i></button>
     </form>
 </div>
 
