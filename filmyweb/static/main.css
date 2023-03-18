@@ -86,7 +86,7 @@ h1 {
 #menu {
     width: 980px;
     margin-top: 20px;
-    ackground-color: rgba(0,0,0,0.3)
+    background-color: rgba(0,0,0,0.3);
     border-radius: 15px;
     transition-duration: 0.5;
     padding: 10px;
