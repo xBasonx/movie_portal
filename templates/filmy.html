@@ -4,35 +4,7 @@
 
 
 {% block strona %}
-<div id="container">
-    <div id="logo">Filmania</div>
 
-    <!-- Logowanie użytkownika -->
-
-    <div id="logpanel">
-        {% if user.is_authenticated %}
-            <h4 class="loginwelcome">Witaj : {{ user.username }}</h4>
-            <a href="{% url 'logout' %}" class="log">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
-        {% else %}
-            <a href="{% url 'login' %}" class="log">Login <i class="fa-solid fa-right-to-bracket"></i></a>
-        {% endif %}
-    </div>
-
-    <div style="clear:both"></div>
-
-    <!-- Menu główne -->
-
-    <div id="menu">
-        <div class="option">Główna</div>
-        <div class="option">Filmy</div>
-        <div class="option">Seriale</div>
-        <div class="option">Ranking</div>
-        <div class="option">Moja lista</div>
-        <div class="option">Profil</div>
-        <div class="option">Recenzje</div>
-        <div class="option">Kontakt</div>
-        <div style="clear:both"></div>
-    </div>
 
     <!-- Nad tekst strony -->
 

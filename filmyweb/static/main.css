@@ -1,6 +1,7 @@
 body {
     padding: 2rem;
-    background-color: #101820;
+    background: rgb(41,40,55);
+    background: linear-gradient(135deg, rgba(41,40,55,1) 0%, rgba(88,68,43,1) 43%, rgba(164,110,40,1) 100%);
     font-family: 'Lato', sans-serif;
 }
 
@@ -85,7 +86,7 @@ h1 {
 #menu {
     width: 980px;
     margin-top: 20px;
-    background-color: #303030;
+    ackground-color: rgba(0,0,0,0.3)
     border-radius: 15px;
     transition-duration: 0.5;
     padding: 10px;
@@ -273,5 +274,16 @@ h1 {
 }
 
 .logdiv {
+    float: left;
+}
+
+.navbar {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.navbar1 {
     float: left;
 }
